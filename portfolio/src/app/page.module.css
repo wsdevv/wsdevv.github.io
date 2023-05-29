@@ -1,0 +1,25 @@
+
+.background {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 0px;
+    width: 100vh;
+    height: 100vh;
+}
+
+.imbackground {
+    position: absolute;
+
+    filter: blur(10px) brightness(.6);
+    transform: 1px;
+    left: 0px;
+    top: -20px;
+    border: -10px;
+    width: 150vw;
+    height: 100vw;
+    opacity: 0;
+    transition: 1s;
+
+}
+

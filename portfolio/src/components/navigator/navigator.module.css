@@ -1,0 +1,63 @@
+
+
+.navigator { 
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-size:x-large;
+    user-select: none;
+    align-items: center;
+    transition: 1s;
+    z-index: 100;
+}
+
+.navigator.opentab { 
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 10%;
+    font-size:x-large;
+    user-select: none;
+    align-items: center;
+    transition: 1s;
+    animation: slide-up 1s;
+}
+
+.navigator .unhovered {
+    color: white;
+    filter: blur(2px);
+    transition: 1s;
+    z-index: 10000;
+}
+
+.navigator .hovered { 
+ 
+    color: lightsteelblue;
+    filter: none;
+    font-size: xx-large;
+    transition: 1s;
+    z-index: 10000;
+
+}
+
+@keyframes slide-up { 
+    0% { 
+        top: 50%;
+    }
+    50% {
+        top: 50%;
+    }
+    100% { 
+        top: 10%;
+    }
+}
+
