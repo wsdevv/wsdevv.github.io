@@ -1,6 +1,7 @@
 'use client';
 import { Dispatch, SetStateAction, SyntheticEvent, useState } from "react";
 import styles from "./navigator.module.css";
+import tabstyles from "../tab/tab.module.css";
 import { PageFrontData } from "../lib";
 
 // interface declared for the 
@@ -77,9 +78,12 @@ export default function Navigator(attributes: NavigatorAttributes) {
 
     // move navigation up when clicked
     const openTab = (e: SyntheticEvent) => {
+        let it = document.getElementById("infotab");
+        let nv = document.getElementById("navigator");
+        if (!it || !nv) return;  
         setClickedState(hoveredObjState);
-        let nav = document.getElementById("navigator");
-        nav?.classList.add(styles.opentab);
+        it.classList.add(tabstyles.open);
+        nv.classList.add(styles.opentab);
        
     }
 
